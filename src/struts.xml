@@ -4,11 +4,18 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 
-
 <!--suppress Struts2ModelInspection -->
 <struts>
     <package name="home" extends="struts-default" namespace="/home">
         <action name="banner" method="queryAll" class="com.oaec.action.BannerAction"/>
         <action name="merchant_*" method="query{1}" class="com.oaec.action.MerchantAction"/>
     </package>
+    <package name="merchant" extends="struts-default" namespace="/merchant">
+        <action name="foods" method="queryAll" class="com.oaec.action.FoodAction"/>
+        <action name="foods_by_tid" method="queryByTid" class="com.oaec.action.FoodAction"/>
+    </package>
+    <package name="user" extends="struts-default" namespace="/user">
+        <action name="login" method="login" class="com.oaec.action.UserAction"/>
+    </package>
+
 </struts>

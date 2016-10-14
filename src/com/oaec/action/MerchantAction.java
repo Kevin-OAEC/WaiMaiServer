@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by Kevin on 2016/10/11.
  */
-public class MerchantAction extends ActionSupport {
+public class MerchantAction extends BaseAction {
 
     MerchantDaoImpl merchantDao = new MerchantDaoImpl();
     private int pno;
@@ -49,17 +49,4 @@ public class MerchantAction extends ActionSupport {
         write(s);
     }
 
-    /**
-     * 发送json数据给客户端
-     * @param s
-     * @throws IOException
-     */
-    private void write(String s) throws IOException {
-        HttpServletResponse response = ServletActionContext.getResponse();
-        response.setContentType("text/html;charset=utf-8");
-        PrintWriter out = response.getWriter();
-        out.print(s);
-        out.flush();
-        out.close();
-    }
 }
