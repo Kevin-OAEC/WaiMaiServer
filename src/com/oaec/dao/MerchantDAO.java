@@ -10,4 +10,5 @@ import java.util.List;
 public interface MerchantDAO {
     public List<Merchant> queryAll();
     public List<Merchant> queryLimit(int pno,int ps);
+
 }

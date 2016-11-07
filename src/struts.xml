@@ -17,5 +17,13 @@
     <package name="user" extends="struts-default" namespace="/user">
         <action name="login" method="login" class="com.oaec.action.UserAction"/>
     </package>
+    <package name="cart" extends="struts-default" namespace="/cart">
+        <action name="query" method="query" class="com.oaec.action.CartAction"/>
+        <action name="add" method="add" class="com.oaec.action.CartAction"/>
+        <action name="sub" method="sub" class="com.oaec.action.CartAction"/>
+    </package>
+    <package name="test" extends="struts-default" namespace="/test">
+        <action name="query" method="query" class="com.oaec.action.TestAction"/>
+    </package>
 
 </struts>

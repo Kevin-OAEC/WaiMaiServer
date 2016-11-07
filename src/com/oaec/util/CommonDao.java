@@ -86,7 +86,6 @@ public class CommonDao<T> extends DBHelper {
                                    * t：要执行方法的对象
                                    * obj：执行方法时需要的参数
                                    */
-                                  System.out.println(t+"-"+obj);
                                    if (obj instanceof java.math.BigDecimal) {
                                       m.invoke(t,     ((java.math.BigDecimal) obj).intValue());
                                   } else {
